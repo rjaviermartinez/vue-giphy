@@ -7,6 +7,14 @@
                 v-model="nameImg"
             >
 
+            <label for="quantity">Mostar</label>
+            <input 
+                type="number"
+                v-model="quantity"
+                name="quantity"
+                id="quantity"
+            >
+
             <button
 
             >
@@ -21,14 +29,16 @@
         name: 'GiphyForm',
         data()  {
             return {
-                nameImg: ''
+                nameImg: '', 
+                quantity: 0
             }
         },
         methods: {
             onSubmit() {
                 console.log('submited');
                 this.$emit('searchGiphy', {
-                    nameImg: this.nameImg
+                    nameImg: this.nameImg,
+                    quantity: this.quantity
                 });
             }
         }

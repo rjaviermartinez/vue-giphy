@@ -42,7 +42,7 @@ export default {
     searchGiphy(obj) {
       const q = obj.nameImg;
 
-      const url = 'https://api.giphy.com/v1/gifs/search?api_key=yvwA8IzIyat8LWFNiIbVz6BqNGAz6n8N&q='+q+'&limit=5&offset=0&rating=G&lang=en';
+      const url = 'https://api.giphy.com/v1/gifs/search?api_key=yvwA8IzIyat8LWFNiIbVz6BqNGAz6n8N&q='+q+'&limit='+obj.quantity+'&offset=0&rating=G&lang=en';
 
       Axios.get(url).then(
         (res) =>{
